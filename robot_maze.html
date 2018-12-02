@@ -12398,7 +12398,7 @@ height=263
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(1)：(epoch)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(1)：(only change epoch)</span>
 <span class="n">epoch</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">epsilon0</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -12448,7 +12448,7 @@ height=263
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(2)：(epsilon0)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(2)：(only change epsilon0)</span>
 <span class="n">epoch</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">epsilon0</span> <span class="o">=</span> <span class="mf">0.9</span>   <span class="c1">#compare epsilon0</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -12498,7 +12498,7 @@ height=263
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(3)：epsilon0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(3)：(only change epsilon0)</span>
 <span class="n">epoch</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">epsilon0</span> <span class="o">=</span> <span class="mf">0.1</span>   <span class="c1">#compare</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span>     
@@ -12548,7 +12548,7 @@ height=263
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(4)：alpha</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(4)：(only change alpha)</span>
 <span class="n">epoch</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">epsilon0</span> <span class="o">=</span> <span class="mf">0.5</span>   
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.1</span>      <span class="c1">#compare</span>
@@ -12598,7 +12598,7 @@ height=263
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(5)：alpha</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(5)：(only change alpha)</span>
 <span class="n">epoch</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">epsilon0</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.9</span>      <span class="c1">#compare</span>
@@ -12648,7 +12648,7 @@ height=263
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(6)：(gamma)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(6)：(only change gamma)</span>
 <span class="n">epoch</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">epsilon0</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -12698,7 +12698,7 @@ height=263
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(7)：(trap_number)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 可选的参数(7)：(only change trap_number)</span>
 <span class="n">epoch</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">epsilon0</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -12825,7 +12825,8 @@ height=263
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>回答：第8种根据前7种情况对比进行的分析，选取了适当合适的数值，除了初期收敛有些震荡，对训练结果基本满意。如果改进，可以进一步细化比较各个参数微调容易产生震荡的epsilon参数。</p>
+<p>回答：第8种根据前7种情况对比进行的分析，选取了适当合适的数值，对训练结果基本满意。
+如果改进，由于学习率 α 的目的是为了在更新 Q 值的同时也保留过去学到的结果，那么对于不同的 state，实际上学习的进度是不一样的。那么此处对所有的 state 统一设置 α，似乎并不是最优的做法。你可以考虑对每个 state 设置不同的学习率，该 state 学习完毕后其对应的 α 衰减，而其他 state 对应的 α 不变。</p>
 
 </div>
 </div>
