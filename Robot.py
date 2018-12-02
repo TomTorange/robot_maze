@@ -1,4 +1,5 @@
 import random
+import math
 
 class Robot(object):
 
@@ -45,8 +46,7 @@ class Robot(object):
             pass
         else:
             # TODO 2. Update parameters when learning
-            # self.epsilon = random.random()
-            self.epsilon *= 0.6
+            self.epsilon *= math.cos(2*self.t)
 
         return self.epsilon
 
